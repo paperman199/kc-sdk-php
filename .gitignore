@@ -1,6 +1,4 @@
 vendor/
-.idea
-.git
 tests/.env.*
 tests/credentials.json
 error_*
