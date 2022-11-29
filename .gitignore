@@ -17,7 +17,6 @@ yarn-error.log
 /.idea
 /.vscode
 /redis-data/
-/composer.lock
 /package-lock.json
 vendor/
 tests/.env.*
