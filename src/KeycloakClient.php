@@ -48,11 +48,11 @@ class KeycloakClient
         $this->oauthProvider = new GenericProvider([
             'clientId' => $clientId,
             'clientSecret' => $clientSecret,
-            'urlAccessToken' => "$url/auth/realms/$authRealm/protocol/openid-connect/token",
+            'urlAccessToken' => "$url/realms/$authRealm/protocol/openid-connect/token",
             'urlAuthorize' => '',
             'urlResourceOwnerDetails' => '',
         ]);
-        $this->guzzleClient = new GuzzleClient(['base_uri' => "$url/auth/admin/realms/"]);
+        $this->guzzleClient = new GuzzleClient(['base_uri' => "$url/admin/realms/"]);
     }
 
     public function sendRealmlessRequest(string $method, string $uri, $body = null, array $headers = []): ResponseInterface
