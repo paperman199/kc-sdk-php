@@ -1,8 +1,7 @@
 {
-    "name": "wk-forms/keycloak-php-sdk",
-    "description": "PHP wrapper for the KeyCloak admin API",
+    "name": "wkf/kc-sdk-php",
+    "description": "Modified PHP wrapper for the KeyCloak",
     "keywords": [
-        "keycloak",
         "sdk",
         "admin",
         "identity server"
