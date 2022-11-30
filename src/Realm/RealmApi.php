@@ -14,6 +14,7 @@ use Keycloak\Realm\Entity\NewAuthenticationExecution;
 use Keycloak\Realm\Entity\NewAuthenticationFlow;
 use Keycloak\Service\CreateResponseService;
 use Keycloak\Realm\Entity\Role;
+use Keycloak\User\Entity\NewUser;
 
 class RealmApi
 {
@@ -35,6 +36,12 @@ class RealmApi
             }
         }
         return null;
+    }
+
+    public function create($realmConfig): string
+    {
+        $res = $this->client->sendRequest('POST', 'admin/realms', $realmConfig);
+        return CreateResponseService::handleCreateResponse($res);
     }
 
     public function createAuthenticationFlow(NewAuthenticationFlow $flow): string
